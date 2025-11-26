@@ -2,8 +2,7 @@
 Módulo barco.py
 Clase Barco para el juego Hundir la Flota
 
-Autor: Estudiante DAM-1
-Asignatura: COD
+Autor: Felipe (DAM-1 - COD)
 """
 
 
