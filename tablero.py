@@ -2,8 +2,7 @@
 Módulo tablero.py
 Clase Tablero para el juego Hundir la Flota
 
-Autor: Estudiante DAM-1
-Asignatura: COD
+Autor: Felipe (DAM-1 - COD)
 """
 
 
