@@ -56,3 +56,52 @@ class Tablero:
             print()
         
         print("="*50 + "\n")
+
+
+# Bloque de pruebas
+if __name__ == "__main__":
+    print("=== PRUEBAS DE LA CLASE TABLERO ===\n")
+    
+    # Prueba 1: Tablero pequeño 5x5
+    print("PRUEBA 1: Tablero 5x5")
+    tablero_pequeno = Tablero(5)
+    tablero_pequeno.mostrar_tablero()
+    
+    print(f"Dimensiones: {tablero_pequeno.dimensiones}")
+    print(f"Cantidad de filas: {len(tablero_pequeno.casillas)}")
+    print(f"Cantidad de columnas: {len(tablero_pequeno.casillas[0])}")
+    
+    # Verificar que todas las casillas están inicializadas con 0
+    todas_agua = all(
+        casilla == 0 
+        for fila in tablero_pequeno.casillas 
+        for casilla in fila
+    )
+    print(f"¿Todas las casillas tienen agua (0)? {todas_agua}")
+    
+    # Prueba 2: Tablero estándar 10x10
+    print("\n\nPRUEBA 2: Tablero 10x10 (Tamaño estándar)")
+    tablero_estandar = Tablero(10)
+    tablero_estandar.mostrar_tablero()
+    
+    # Prueba 3: Tablero grande 15x15
+    print("\nPRUEBA 3: Tablero 15x15 (Tamaño grande)")
+    tablero_grande = Tablero(15)
+    tablero_grande.mostrar_tablero()
+    
+    # Prueba 4: Modificar una casilla (simulación)
+    print("\nPRUEBA 4: Modificando casillas manualmente")
+    tablero_test = Tablero(8)
+    print("Tablero inicial:")
+    tablero_test.mostrar_tablero()
+    
+    # Simular colocar algunos barcos (1 = barco)
+    tablero_test.casillas[0][0] = 1
+    tablero_test.casillas[0][1] = 1
+    tablero_test.casillas[0][2] = 1
+    tablero_test.casillas[5][5] = 1
+    
+    print("Tablero con algunas casillas modificadas (1 = barco):")
+    tablero_test.mostrar_tablero()
+    
+    print("\n=== FIN DE LAS PRUEBAS ===")
